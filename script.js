@@ -7,7 +7,7 @@ class Person{
 		this._age = age
 	}
 	get age(){
-		return this._age
+		console.log(this._age)
 	}
 }
 class Student extends Person{
@@ -28,15 +28,17 @@ class Teacher extends Person{
 }
 const person = new Person("John", 25);
 console.log(person.name); 
-
-person.age = 30;
 console.log(person.age); 
+person.age = 30;
+
 
 const student = new Student("Alice", 22);
 student.study(); 
 
 const teacher = new Teacher("Bob", 40);
 teacher.teach(); 
+teacher.age = 50
+
 
 // Do not change the code below this line
 window.Person = Person;
