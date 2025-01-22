@@ -1,10 +1,13 @@
 class Person{
 	constructor(name,age){
 		this.name = name
-		this.age = age;
+		this._age = age;
 	}
 	set age(age){
-		this.age = age
+		this._age = age
+	}
+	get age(){
+		return this._age
 	}
 }
 class Student extends Person{
